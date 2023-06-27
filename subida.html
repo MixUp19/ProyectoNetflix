@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesForm.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <title>Subida de docs</title>
+</head>
+
+<body>
+    <header>
+        <div class="contenedor">
+            <h2 class="logotipo">Subida de fotos</h2>
+        </div>
+    </header>
+    <div class="formulario">
+        <div class="texto">
+            <input type="text" class="nombre" placeholder="Titulo del momento que quieres guardar">
+            <input type="text" class="descripcion" placeholder="Descripcion del momento a guardar :D">
+
+        </div>
+        <div class="drop-area">
+            <h2>Arrastra y suelta tus imagenes</h2>
+            <h2>o</h2>
+            <h2>seleciona tus archivos</h2>
+            <input type="file" id="input-file" hidden>
+        </div>
+    </div>
+    <div class="subida">
+        <button onclick="createForm()">Subir</button>
+    </div>
+    <script src="https://kit.fontawesome.com/4c08dc9683.js" crossorigin="anonymous"></script>
+    <script src="js/insercion.js"></script>
+</body>
+
+</html>
