@@ -90,7 +90,7 @@ body{
     font-weight: 250;
     font-size: 1.5rem;
   }
-  .subida button{
+  button{
 
     padding: 0.55rem 1.4rem;
     font-size: 1.1 rem;
@@ -105,6 +105,34 @@ body{
     width: auto;
     height: 80%;
   }
+
+.modalcontainer{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 50rem;
+    width: 100rem;
+}
+.show{
+    pointer-events: auto;
+    opacity: 1;
+}
+.modal{
+    background-color: #141414;
+    width: 600px;
+    max-width: 100%;
+    padding: 38px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    color:white;
+}
 
   @media screen and (max-width:800px){
     *{
@@ -122,7 +150,7 @@ body{
     align-items: center;
     height: 80vh;
   }
-  .formulario .nombre,
+.formulario .nombre,
 .formulario .descripcion{
     width: 35em; 
     display: block;
@@ -150,5 +178,9 @@ body{
 }
 .descripcion{
     height: 15em;
+}
+.modalcontainer{
+  height: 100rem;
+  width: 75rem;
 }
   }

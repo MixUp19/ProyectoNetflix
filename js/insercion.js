@@ -5,16 +5,16 @@ const dragText = dropArea.querySelector('h2');
 const input = dropArea.querySelector("#input-file")
 const validExtensions = ['image/jpeg','image/jpg','image/png','image/gif'];
 const preview = document.querySelector("#preview");
+const modal_container = document.getElementById('modal_container');
+const modal_espera=document.getElementById('modal_espera')
+const modal =document.getElementById('modal_');
+const close = document.getElementById('close');
 let files, nameInput='', description='';
 let docType;
 function showFile(files){
-    if (files.length === undefined) {
-        proccesFile(files);
-    } else {
         for (const file of files) {
             proccesFile(file);
         }
-    }
     
 }
 
@@ -38,6 +38,7 @@ function createForm(){
     if(nameInput === '' || description === '' || files === undefined){
         alert ("Faltan campos por llenar");
     }else{
+        modal_espera.classList.add('show');
         let formData = new FormData();
         formData.append('name', nameInput);
         formData.append('description', description);
@@ -54,9 +55,15 @@ async function upload(formData){
     fetch(url, options)
     .then(response => response.json())
     .then(data => {
-        if(data != undefined){
-            alert("subido con extito");
+        if (data.id != '') {
+            modal.querySelector('.titulo').textContent="Salió bien :D"
+            modal.querySelector('.parrafo').textContent="El recuerdo se guardó con exito";
+        } else {
+            modal.querySelector('.titulo').textContent="Algo salió mal :(";
+            modal.querySelector('.parrafo').textContent="Trata de nuevo, si no mandame mensaje";
         }
+        modal_espera.classList.remove('show');
+        modal_container.classList.add('show');
   });
 }
 // obtencion de datos mediante los eventListener
@@ -104,5 +111,11 @@ descripcion.addEventListener("input", (e) =>{
 });
 nombre.addEventListener("input", (e) =>{
     nameInput = nombre.value;
+});
+close.addEventListener('click',() =>{
+    modal_container.classList.remove('show');
+    nombre.value='';
+    descripcion.value="";
+    dropArea.innerHTML='<h2>Arrastra y suelta tus imagenes</h2><h2>o</h2><h2>seleciona tus archivos</h2><input type="file" id="input-file" hidden>';
 });
 
