@@ -112,6 +112,7 @@ descripcion.addEventListener("input", (e) =>{
 nombre.addEventListener("input", (e) =>{
     nameInput = nombre.value;
 });
+// función para cerrar la ventana modal
 close.addEventListener('click',() =>{
     modal_container.classList.remove('show');
     nombre.value='';

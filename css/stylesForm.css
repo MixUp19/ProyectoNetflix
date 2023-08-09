@@ -90,7 +90,8 @@ body{
     font-weight: 250;
     font-size: 1.5rem;
   }
-  button{
+  .boton,
+  .cerrar{
 
     padding: 0.55rem 1.4rem;
     font-size: 1.1 rem;
@@ -104,6 +105,7 @@ body{
   .drop-area img{
     width: auto;
     height: 80%;
+    
   }
 
 .modalcontainer{
@@ -132,6 +134,11 @@ body{
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     text-align: center;
     color:white;
+}
+.modal .imagen img{
+  height: 30rem;
+  width: auto;  
+  vertical-align: top;
 }
 
   @media screen and (max-width:800px){

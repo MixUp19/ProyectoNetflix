@@ -88,7 +88,6 @@ function show(data){
         a.appendChild(image);
         div.appendChild(a);
         div.addEventListener('click', (e)=>{
-            const elemento = e.currentTarget;
             pelicula_principal.style.backgroundImage= 'url('+element.image.secure_url+')';
             titulo.textContent= element.name;
             descripcion.textContent = element.description
