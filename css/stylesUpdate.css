@@ -1,0 +1,301 @@
+:root{
+    --rojo:#e50914;
+    --fondo: #141414;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+header{
+    padding: 30px 0;
+}
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logotipo{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;
+}
+header nav a {
+    color: #AAA;
+    text-decoration: none;
+    margin-right: 20px;
+}
+header nav a:hover,
+header nav a.activo{
+    color: #FFF;
+}   
+/*titulo y controles*/
+.contenedor-titulo-controles{
+    display: flex;
+    justify-content:space-between;
+    align-items: end;
+}
+.contenedor-titulo-controles h3{
+    color: #fff;
+    font-size: 30px;
+}
+.contenedor-titulo-controles .indicadores button{
+    background: #FFF;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+.contenedor-titulo-controles .indicadores button:hover,
+.contenedor-titulo-controles .indicadores button.activo{
+    background: red;
+}
+/*contenedor y flechas*/
+.peliculas-recomendadas {
+    margin-bottom: 70px;
+}
+.peliculas-recomendadas .contenedor-principal{
+    display: flex;
+    align-items: center;
+    position:relative;
+}
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha {
+    position: absolute;
+    border: none;
+    background: rgba(0,0,0,0.3);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    color:#fff;
+    cursor: pointer;
+    z-index: 500;
+    transition: .2s ease all;
+}
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda{
+    left:0;
+}
+.peliculas-recomendadas .contenedor-principal .flecha-derecha{
+    right:0;
+}
+.peliculas-recomendadas .contenedor-principal .flecha-izquierda:hover,
+.peliculas-recomendadas .contenedor-principal .flecha-derecha:hover {
+    background:rgba(0,0,0,0.9) ;
+}
+/*carousel*/
+.peliculas-recomendadas .contenedor-carousel{
+    width: 100%;
+    padding: 20px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.peliculas-recomendadas .contenedor-carousel .carousel{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula{
+    min-width: 20%;
+    transition:  .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+}
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula.hover{
+    transform: scale(1.2);
+    transform-origin: center;
+}
+.peliculas-recomendadas .contenedor-carousel .carousel .pelicula img{
+    width: 100%;
+    vertical-align: top;
+}
+.formulario{
+    display: flex;
+    color:azure;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+.formulario .hover{
+    cursor: pointer;
+}
+.nombre{
+    height: 8em;
+}
+.descripcion{
+    height: 20em;
+}
+.subida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulario .nombre,
+.formulario .descripcion{
+    width: 30em; 
+    display: block;
+    background-color: #141414;
+    border-radius: 0.3rem;
+    border: 3px solid azure;
+    color:white; 
+    margin-bottom: 10px;
+}
+  .drop-area{
+    margin: 0;
+    padding: 0;
+    border: none;
+    width: 39rem;
+    height: 28rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    overflow: hidden;
+  }
+  .drop-area.active{
+    background-color: rgb(56, 55, 55);
+    color:black;
+    border: 0.1rem dashed gray;
+  }
+  .drop-area h2{
+    font-size: 1.7rem;
+  }
+  .drop-area span{
+    font-weight: 250;
+    font-size: 1.5rem;
+  }
+  .modalcontainer{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    height: 55rem;
+    width: 115rem;
+  }
+  .show{
+    pointer-events: auto;
+    opacity: 1;
+  }
+  .modal{
+    background-color: #141414;
+    width: auto;
+    max-width: 100rem;
+    padding: 38px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    color:white;
+  }
+  .modal .imagen img{
+  height: auto;
+  max-height: 30rem;
+  width: auto; 
+  max-width: 30rem;;
+  vertical-align: top;
+  }
+  .boton{
+    padding: 0.55rem 1.4rem;
+    font-size: 1.1 rem;
+    border: 0;
+    outline:none ;
+    background-color: #e50914;
+    color: white;
+    border-radius: 0.3rem;
+    cursor:pointer;
+  }
+  .drop-area img{
+    width: auto;
+    height: 80%;
+    
+  }
+/*media query*/
+@media screen and (max-width:800px){
+    header .logotipo {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor{
+        flex-direction: column;
+        text-align: center;
+    }
+    .peliculas-recomendadas .contenedor-carousel{
+        overflow: visible;
+    }
+    .peliculas-recomendadas .contenedor-carousel .carousel{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 20px;
+    }
+
+    .peliculas-recomendadas .indicadores,
+    .peliculas-recomendadas .flecha-izquierda,
+    .peliculas-recomendadas .flecha-derecha {
+        display: none;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 10px;
+        line-height: 1.5rem;
+    }
+    .formulario{
+      display: flex;
+      flex-direction: column;
+      color:azure;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+  .formulario .nombre,
+  .formulario .descripcion{
+      width: 35em; 
+      display: block;
+      background-color: #141414;
+      border-radius: 0.3rem;
+      border: 3px solid azure;
+      color:white; 
+      margin-bottom: 10px;
+  }
+    .drop-area{
+      margin: 0;
+      padding: 0;
+      border: none;
+      width: 35rem;
+      height: 24rem;
+      border-radius: 0.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; 
+      overflow: hidden;
+    }
+    .nombre{
+      height: 4em;
+  }
+  .descripcion{
+      height: 15em;
+  }
+  .modalcontainer{
+    height: 100rem;
+    width: 75rem;
+  }
+    
+}

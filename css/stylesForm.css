@@ -10,19 +10,27 @@
     line-height: 1.5rem;
 }
 header{
-    padding: 30px 0;
+  padding: 30px 0;
 }
 header .contenedor{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 header .logotipo{
-    font-family: 'Bebas Neue', cursive;
-    font-weight: normal;
-    color: var(--rojo);
-    font-size: 40px;
+  font-family: 'Bebas Neue', cursive;
+  font-weight: normal;
+  color: var(--rojo);
+  font-size: 40px;
+}
+header nav a {
+  color: #AAA;
+  text-decoration: none;
+  margin-right: 20px;
+}
+header nav a:hover,
+header nav a.activo{
+  color: #FFF;
 }
 body{
     background: var(--fondo);

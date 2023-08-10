@@ -3,14 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/stylesdelete.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
-    <title>Eliminar</title>
-</head>
-<body>
+    <link rel="stylesheet" href="css/stylesUpdate.css">
+    <title>Document</title>
 </head>
 <body>
     <header>
@@ -19,8 +13,8 @@
             <nav>
                 <a href="/index.html">Inicio</a>
                 <a href="/subida.html">Subir</a>
-                <a href="/actualizacion.html">Editar</a>
-                <a href="#" class="activo">Eliminar</a>
+                <a href="#" class="activo">Editar</a>
+                <a href="/eliminación.html">Eliminar</a>
             </nav>
         </div>
     </header>
@@ -42,16 +36,25 @@
         </div>
         <div class="modalcontainer" id="modal_container">
             <div class="modal" id="modal_">
-                <h1 class="titulo">¿Seguro que quieres borrar este recuerdo? D:</h1>
-                <div class="imagen">
-                    <img id="foto-seleccionada" src="sources/foto3.jpg" alt="">
+                <h1 class="titulo">Edita el recuerdo ;D</h1>
+                <div class="formulario">
+                    <div class="texto">
+                        <input type="text" class="nombre"  placeholder="Nuevo titulo para nuestro recuerdo">
+                        <input type="text" class="descripcion" placeholder="Nueva descripcion para nuestro recuerdo">
+                    </div>
+                    <div class="drop-area">
+                        <img id="foto-seleccionada"src="sources/foto1.jpg" alt="">
+                    </div>
                 </div>
-                <div class="controles"><button id="close" class="boton">Cerrar</button><button id="borrar" class="boton">Borrar</button></div>
+                <div class="subida">
+                    <button id="close" class="boton">Cerrar</button>
+                    <button class="boton" id="boton_actualizar">Actualizar</button>
+                </div>
             </div>
         </div>
         <div class="modalcontainer" id="modal_espera">
             <div class="modal">
-                <H1>Esta siendo eliminado</H1>
+                <H1>El recuerdo esta siendo cambiado.</H1>
             </div>
         </div>
         <div class="modalcontainer" id="modal_confirmacion">
@@ -62,6 +65,6 @@
         </div> 
     </main>
     <script src="https://kit.fontawesome.com/4c08dc9683.js" crossorigin="anonymous"></script>
-    <script src="js/eliminacion.js"></script>
+    <script src="js/actualizacion.js"></script>
 </body>
 </html>
