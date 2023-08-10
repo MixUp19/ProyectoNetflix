@@ -231,8 +231,27 @@ vertical-align: top;
     .peliculas-recomendadas .flecha-derecha {
         display: none;
     }
+    
     .modalcontainer{
-        height: 60rem;
-        width: 50rem;
+        height: 50em;
+        width: 25rem;
       }
+      .modal{
+        height: auto;
+        max-height: 70rem;
+        background-color: #141414;
+        width: auto;
+        max-width: 20rem;
+        padding: 38px 50px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        text-align: center;
+        color:white;
+      }
+      .modal .imagen img{
+        height: auto;
+        max-height: 15rem;
+        width: auto; 
+        vertical-align: top;
+        }
 }

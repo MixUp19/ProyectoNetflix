@@ -294,8 +294,19 @@ header nav a.activo{
       height: 15em;
   }
   .modalcontainer{
-    height: 100rem;
-    width: 75rem;
+    height: 90em;
+    width: 40rem;
   }
-    
+  .modal{
+    height: auto;
+    max-height: 70rem;
+    background-color: #141414;
+    width: auto;
+    max-width: 100rem;
+    padding: 38px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    text-align: center;
+    color:white;
+  }
 }
