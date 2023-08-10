@@ -154,8 +154,8 @@ header nav a.activo{
     margin: 0;
     padding: 0;
     border: none;
-    width: 39rem;
-    height: 28rem;
+    width: 30vw;
+    height: 40vh;
     border-radius: 0.3rem;
     display: flex;
     align-items: center;
@@ -185,8 +185,8 @@ header nav a.activo{
     pointer-events: none;
     top: 0;
     left: 0;
-    height: 55rem;
-    width: 115rem;
+    height: 100vh;
+     width: 100vw;
   }
   .show{
     pointer-events: auto;
@@ -195,7 +195,7 @@ header nav a.activo{
   .modal{
     background-color: #141414;
     width: auto;
-    max-width: 100rem;
+    max-width: 85vw;
     padding: 38px 50px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -221,7 +221,8 @@ header nav a.activo{
   }
   .drop-area img{
     width: auto;
-    height: 80%;
+    max-width: 30vw;
+    height: auto;
     
   }
 /*media query*/
@@ -262,11 +263,12 @@ header nav a.activo{
       color:azure;
       justify-content: center;
       align-items: center;
-      height: 80vh;
+      height: 50vh;
     }
   .formulario .nombre,
   .formulario .descripcion{
-      width: 35em; 
+    height: 10vh;
+      width: 70vw; 
       display: block;
       background-color: #141414;
       border-radius: 0.3rem;
@@ -278,8 +280,8 @@ header nav a.activo{
       margin: 0;
       padding: 0;
       border: none;
-      width: 35rem;
-      height: 24rem;
+      width: 50vw;
+      height: 50vh;
       border-radius: 0.3rem;
       display: flex;
       align-items: center;
@@ -294,19 +296,25 @@ header nav a.activo{
       height: 15em;
   }
   .modalcontainer{
-    height: 90em;
-    width: 40rem;
+    height: 100vh;
+     width: 100vw;
   }
   .modal{
     height: auto;
     max-height: 70rem;
     background-color: #141414;
     width: auto;
-    max-width: 100rem;
+    max-width: 85vw;
     padding: 38px 50px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     text-align: center;
     color:white;
+  }
+  .drop-area img{
+    width: auto;
+    max-width: 50vw;
+    height: auto;
+    
   }
 }

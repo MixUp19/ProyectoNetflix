@@ -166,6 +166,7 @@ header nav a.activo{
 }
 
 .modalcontainer{
+    font-size: 16px;
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);
   align-items: center;
@@ -175,8 +176,8 @@ header nav a.activo{
   pointer-events: none;
   top: 0;
   left: 0;
-  height: 55rem;
-  width: 115rem;
+  height: 100vh;
+  width: 100vw;
 }
 .show{
   pointer-events: auto;
@@ -184,9 +185,8 @@ header nav a.activo{
 }
 .modal{
   background-color: #141414;
-  width: 600px;
-  max-width: 100%;
-  padding: 38px 50px;
+  width: 38em;
+  padding: 2.3em 3.1em;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   text-align: center;
@@ -194,9 +194,9 @@ header nav a.activo{
 }
 .modal .imagen img{
 height: auto;
-max-height: 30rem;
+max-height: 30em;
 width: auto; 
-max-width: 30rem;;
+max-width: 30em;;
 vertical-align: top;
 }
 /*media query*/
@@ -233,15 +233,15 @@ vertical-align: top;
     }
     
     .modalcontainer{
-        height: 50em;
-        width: 25rem;
+        height: 100vh;
+         width: 100vw;
       }
       .modal{
         height: auto;
-        max-height: 70rem;
+        max-height: 80vh;
         background-color: #141414;
         width: auto;
-        max-width: 20rem;
+        max-width: 80vw;
         padding: 38px 50px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0,0,0,0.2);
@@ -250,8 +250,9 @@ vertical-align: top;
       }
       .modal .imagen img{
         height: auto;
-        max-height: 15rem;
+        max-height: 90vh;
         width: auto; 
+        max-width: 50vw;
         vertical-align: top;
         }
 }
