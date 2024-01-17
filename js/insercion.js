@@ -47,7 +47,7 @@ function createForm(){
     }
 }
 async function upload(formData){
-    const url = 'https://restapicrud.mixup19.repl.co/products'
+    const url = 'https://album-2huh.onrender.com/products'
     const options ={
         method: 'POST',
         body: formData

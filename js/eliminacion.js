@@ -1,4 +1,4 @@
-const url = 'https://restapicrud.mixup19.repl.co/products';
+const url = 'https://album-2huh.onrender.comproducts';
 const carousel = document.querySelector('.carousel');
 const modal = document.getElementById('modal_container');
 const modal_confirmacion = document.getElementById('modal_confirmacion');

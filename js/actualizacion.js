@@ -1,4 +1,4 @@
-const url = 'https://restapicrud.mixup19.repl.co/products';
+const url = 'https://album-2huh.onrender.com/products';
 const nombre = document.querySelector(".nombre");
 const descripcion = document.querySelector(".descripcion")
 const carousel = document.querySelector('.carousel');
