@@ -1,4 +1,4 @@
-const url = 'https://album-2huh.onrender.comproducts';
+const url = 'https://album-2huh.onrender.com/products';
 const carousel = document.querySelector('.carousel');
 const modal = document.getElementById('modal_container');
 const modal_confirmacion = document.getElementById('modal_confirmacion');
